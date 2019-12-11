@@ -1,16 +1,16 @@
 {
-  "name": "__REPLACE_ME_WITH_PACKAGE_NAME__",
+  "name": "@eturino/significant-diff-round",
   "version": "1.0.0",
-  "author": "__REPLACE_ME_WITH_AUTHOR_NAME__ <__REPLACE_ME_WITH_AUTHOR_EMAIL__>",
-  "description": "__REPLACE_ME_WITH_PACKAGE_DESCRIPTION__",
+  "author": "Eduardo Turiño <eturino@eturino.com>",
+  "description": "util to round 2 numbers to the enough number of decimals to show the difference between them",
   "main": "build/main/index.js",
   "typings": "build/main/index.d.ts",
   "module": "build/module/index.js",
-  "repository": "__REPLACE_ME_WITH_REPO_URL__",
-  "homepage": "__REPLACE_ME_WITH_REPO_URL__",
-  "bugs": "__REPLACE_ME_WITH_REPO_URL_ISSUES__",
+  "repository": "https://github.com/eturino/significant-diff-round.ts",
+  "homepage": "https://github.com/eturino/significant-diff-round.ts",
+  "bugs": "https://github.com/eturino/significant-diff-round.ts/issues",
   "license": "MIT",
-  "keywords": [],
+  "keywords": ["number", "round", "diff", "decimal"],
   "scripts": {
     "describe": "npm-scripts-info",
     "build": "run-s clean && run-p build:*",
@@ -49,11 +49,14 @@
   "engines": {
     "node": ">=10.0"
   },
-  "dependencies": {},
+  "dependencies": {
+    "lodash.round": "^4.0.4"
+  },
   "devDependencies": {
     "@bitjson/npm-scripts-info": "^1.0.0",
     "@types/inquirer": "^6.5.0",
     "@types/jest": "^24.0.18",
+    "@types/lodash.round": "^4.0.6",
     "cz-conventional-changelog": "^3.0.2",
     "gh-pages": "^2.0.1",
     "inquirer": "^7.0.0",
