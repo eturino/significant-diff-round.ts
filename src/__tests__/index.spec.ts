@@ -7,7 +7,7 @@ describe("significantDiffRound(a, b) => { a: roundedA, b: roundedB, precision: p
       expect(significantDiffRound(1.1234567, 1.1234567)).toEqual({
         a: 1,
         b: 1,
-        precision: 0
+        precision: 0,
       });
     });
 
@@ -15,7 +15,7 @@ describe("significantDiffRound(a, b) => { a: roundedA, b: roundedB, precision: p
       expect(significantDiffRound(1.1234123, 1.1234123, 4)).toEqual({
         a: 1.1234,
         b: 1.1234,
-        precision: 4
+        precision: 4,
       });
     });
   });
@@ -32,14 +32,14 @@ describe("significantDiffRound(a, b) => { a: roundedA, b: roundedB, precision: p
         expected: {
           a: 1,
           b: round(1 - Number.EPSILON, MAX_PRECISION),
-          precision: MAX_PRECISION
-        }
+          precision: MAX_PRECISION,
+        },
       },
       {
         a: 11.12340101,
         b: 11.12311231,
-        expected: { a: 11.1234, b: 11.1231, precision: 4 }
-      }
+        expected: { a: 11.1234, b: 11.1231, precision: 4 },
+      },
     ].forEach(({ a, b, expected }) => {
       it(`a: ${a}, b: ${b} => ${JSON.stringify(expected)}`, () => {
         expect(significantDiffRound(a, b)).toEqual(expected);
@@ -53,7 +53,7 @@ describe("significantDiffRound(a, b) => { a: roundedA, b: roundedB, precision: p
       {
         a: 11.1441,
         b: 12.1234,
-        expected: { a: 11.14, b: 12.12, precision: 2 }
+        expected: { a: 11.14, b: 12.12, precision: 2 },
       },
       { a: 11.1, b: 11.2, expected: { a: 11.1, b: 11.2, precision: 2 } },
       { a: 11.1, b: 11.1231, expected: { a: 11.1, b: 11.12, precision: 2 } },
@@ -64,18 +64,16 @@ describe("significantDiffRound(a, b) => { a: roundedA, b: roundedB, precision: p
         expected: {
           a: 1,
           b: round(1 - Number.EPSILON, MAX_PRECISION),
-          precision: MAX_PRECISION
-        }
+          precision: MAX_PRECISION,
+        },
       },
       {
         a: 11.12340101,
         b: 11.12311231,
-        expected: { a: 11.1234, b: 11.1231, precision: 4 }
-      }
+        expected: { a: 11.1234, b: 11.1231, precision: 4 },
+      },
     ].forEach(({ a, b, expected }) => {
-      it(`a: ${a}, b: ${b}, minPrecision: ${min} => ${JSON.stringify(
-        expected
-      )}`, () => {
+      it(`a: ${a}, b: ${b}, minPrecision: ${min} => ${JSON.stringify(expected)}`, () => {
         expect(significantDiffRound(a, b, min)).toEqual(expected);
       });
     });
