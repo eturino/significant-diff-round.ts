@@ -1,6 +1,6 @@
 {
   "name": "@eturino/significant-diff-round",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "author": "Eduardo Turiño <eturino@eturino.com>",
   "description": "util to round 2 numbers to the enough number of decimals to show the difference between them",
   "main": "build/main/index.js",
