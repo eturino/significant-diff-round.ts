@@ -6,6 +6,7 @@
     "module": "ES2015"
   },
   "exclude": [
-    "node_modules/**"
+    "node_modules/**",
+    "src/**/*.spec.ts"
   ]
 }
